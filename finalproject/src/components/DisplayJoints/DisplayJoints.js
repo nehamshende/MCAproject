@@ -20,6 +20,9 @@ const styles = {
 };
 
 export class DisplayJoints extends Component {
+  handleClick = () => {
+    this.props.history.push("/menudetails");
+  };
   render() {
     const { classes } = this.props;
     return (
@@ -47,7 +50,7 @@ export class DisplayJoints extends Component {
               <Button size="small" color="secondary">
                 Share
               </Button>
-              <Button size="small" color="primary">
+              <Button onClick={this.handleClick} size="small" color="primary">
                 Learn More
               </Button>
             </CardActions>
