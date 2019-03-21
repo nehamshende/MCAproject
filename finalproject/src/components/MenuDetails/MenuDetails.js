@@ -9,7 +9,7 @@ import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-import { Card, CardContent } from "@material-ui/core";
+import { Card, CardContent, CardActions } from "@material-ui/core";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -77,6 +77,10 @@ class SwipeableTextMobileStepper extends React.Component {
 
   handleStepChange = activeStep => {
     this.setState({ activeStep });
+  };
+
+  handleClick = () => {
+    this.props.history.push("/menucard");
   };
 
   render() {
@@ -148,6 +152,13 @@ class SwipeableTextMobileStepper extends React.Component {
             <p>Open until 11pm today</p>
           </CardContent>
           <CardContent style={{ float: "right" }}>Gmap</CardContent>
+        </Card>
+        <Card>
+          <CardActions>
+            <Button color="secondary" onClick={this.handleClick}>
+              Order Here
+            </Button>
+          </CardActions>
         </Card>
       </div>
     );
