@@ -8,6 +8,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "../../images/pizzaplace.jpeg";
 import { withStyles } from "@material-ui/core";
+import history from "../../history";
 
 const styles = {
   card: {
@@ -21,7 +22,7 @@ const styles = {
 
 export class DisplayJoints extends Component {
   handleClick = () => {
-    this.props.history.push("/menudetails");
+    history.push("/menudetails");
   };
   render() {
     const { classes } = this.props;

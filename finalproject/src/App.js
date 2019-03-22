@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import "./App.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route, Router } from "react-router-dom";
 import Login from "./components/Login/Login";
 import CustSignup from "./components/Signup/CustSignup";
 import Home from "./components/Home/Home";
 import DisplayJoints from "./components/DisplayJoints/DisplayJoints";
 import MenuDetails from "./components/MenuDetails/MenuDetails";
 import MenuCard from "./components/MenuCard/MenuCard";
+import history from "./history";
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router history={history}>
         <div className="App">
           <Route exact path="/" component={Login} />
           <Route exact path="/signup" component={CustSignup} />
@@ -20,7 +21,7 @@ class App extends Component {
           <Route exact path="/menudetails" component={MenuDetails} />
           <Route exact path="/menucard" component={MenuCard} />
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
