@@ -13,6 +13,7 @@ export class OrderHistory extends Component {
                 height="50"
                 width="50"
                 style={{ float: "left" }}
+                alt=""
               />
               <p>Cafe Mocking Bird</p>
               <p style={{ color: "grey" }}>Mayur Colony, Pune</p>
@@ -44,6 +45,7 @@ export class OrderHistory extends Component {
                 height="50"
                 width="50"
                 style={{ float: "left" }}
+                alt=""
               />
               <p>The Momo Place</p>
               <p style={{ color: "grey" }}>Mayur Colony, Pune</p>
