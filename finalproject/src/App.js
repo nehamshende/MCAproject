@@ -8,6 +8,7 @@ import DisplayJoints from "./components/DisplayJoints/DisplayJoints";
 import MenuDetails from "./components/MenuDetails/MenuDetails";
 import MenuCard from "./components/MenuCard/MenuCard";
 import history from "./history";
+import Orders from "./components/Order/Orders";
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route exact path="/displayjoints" component={DisplayJoints} />
           <Route exact path="/menudetails" component={MenuDetails} />
           <Route exact path="/menucard" component={MenuCard} />
+          <Route exact path="/orders" component={Orders} />
         </div>
       </Router>
     );

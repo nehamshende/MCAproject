@@ -16,11 +16,9 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
-import TableData from "./TableData";
-import TotalOfOrders from "./TotalOfOrders";
-import Icons from "./Icons";
+import Icons from "../MenuCard/Icons";
+import OrderHistory from "./OrderHistory";
 
 const drawerWidth = 240;
 
@@ -81,7 +79,7 @@ const styles = theme => ({
   }
 });
 
-class MenuCard extends React.Component {
+class Orders extends React.Component {
   state = {
     open: false
   };
@@ -170,18 +168,17 @@ class MenuCard extends React.Component {
           })}
         >
           <div className={classes.drawerHeader} />
-          <header>Menu Card</header>
-          <TableData />
-          <TotalOfOrders />
+          <header>Orders</header>
+          <OrderHistory />
         </main>
       </div>
     );
   }
 }
 
-MenuCard.propTypes = {
+Orders.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired
 };
 
-export default withStyles(styles, { withTheme: true })(MenuCard);
+export default withStyles(styles, { withTheme: true })(Orders);
